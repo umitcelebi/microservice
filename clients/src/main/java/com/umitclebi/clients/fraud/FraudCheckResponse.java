@@ -1,4 +1,4 @@
-package com.umitclebi.fraud;
+package com.umitclebi.clients.fraud;
 
 /**
  * User: ucelebi
