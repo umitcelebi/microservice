@@ -28,6 +28,14 @@ services:
     networks:
       - postgres
     restart: unless-stopped
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      # Port used for the Zipkin UI and HTTP Api
+      - "9411:9411"
+      # Uncomment if you set SCRIBE_ENABLED=true
+      # - 9410:9410
 
 networks:
   postgres:
