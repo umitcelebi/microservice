@@ -10,7 +10,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * Date: 1.09.2023
  * Time: 21:38
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {
+        "com.umitclebi.notification",
+        "com.umitclebi.amqp"
+})
 @EnableEurekaClient
 @EnableFeignClients
 public class NotificationApplication {

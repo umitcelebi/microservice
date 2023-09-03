@@ -10,7 +10,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * Date: 20.08.2023
  * Time: 11:22
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {
+        "com.umitclebi.customer",
+        "com.umitclebi.amqp"
+})
 @EnableEurekaClient
 @EnableFeignClients(basePackages = "com.umitclebi.clients")
 public class CustomerApplication {
