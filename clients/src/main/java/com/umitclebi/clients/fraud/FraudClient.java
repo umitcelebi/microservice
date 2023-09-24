@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
  * Date: 31.08.2023
  * Time: 20:37
  */
-@FeignClient("fraud")
+@FeignClient(
+        name = "fraud",
+        url ="${clients.fraud.url}"
+)
 public interface FraudClient {
     @GetMapping("api/v1/fraud-check/{customerId}")
     FraudCheckResponse isFraudster(@PathVariable("customerId") Integer customerId);
